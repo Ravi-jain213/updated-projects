@@ -38,7 +38,7 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="dress2.jpg" alt="Black beauty" style="width:100%;">
+        <img class="dress2.jpg" alt="Black beauty" style="width:100%;">
         <div class="carousel-caption">
         </div>
       </div>
@@ -84,6 +84,10 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
+
+<div>
+<jsp:include page="/WEB-INF/views/footer.jsp"></jsp:include>
 </div>
 
 </body>

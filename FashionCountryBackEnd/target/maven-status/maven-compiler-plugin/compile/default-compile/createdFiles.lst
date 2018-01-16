@@ -1,0 +1,5 @@
+com\Dao\UserDao.class
+com\FashionCountryBackEnd\App.class
+com\config\hibernateConfig.class
+com\DaoImpl\UserDaoImpl.class
+com\model\User.class

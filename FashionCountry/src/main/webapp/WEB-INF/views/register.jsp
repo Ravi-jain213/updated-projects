@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -86,27 +87,27 @@ button:hover {
 
     <div class="form-group">   
     <label><b>Name</b></label>
-    <form: input path="name" class="form-control" placeholder="Enter name" name="name" required />
+    <form:input path="name" type="text" class="form-control" placeholder="Enter name" name="name" />
     </div>
     
     <div class="form-group">
     <label><b>Email</b></label>
-    <form: input path="email" class="form-control" placeholder="Enter Email" name="email" required />
+    <form:input path="email" type="text" class="form-control" placeholder="Enter Email" name="email" />
     </div>
     
     <div class="form-group">
     <label><b>Password</b></label>
-    <form: input path="password" type="password" class="form-control" placeholder="Enter password" name="password" required />
+    <form:input path="password" type="password" class="form-control" placeholder="Enter password" name="password" />
     </div>
     
     <div class="form-group">
     <label><b>Address</b></label>
-    <form:input path="address" class="form-control" placeholder="Enter address" name="address" required />
+    <form:input path="address" class="form-control" placeholder="Enter address" name="address"  />
     </div>
     
     <div class="form-group">
     <label><b>Phone</b></label>
-    <form: input path="phone" class="form-control" placeholder="Enter phone number" name="phone" required />
+    <form:input path="phone" class="form-control" placeholder="Enter phone number" name="phone"  />
     </div>
     
     <label>
