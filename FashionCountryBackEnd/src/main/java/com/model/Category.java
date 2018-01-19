@@ -32,7 +32,13 @@ public class Category implements Serializable
 		this.cname = cname;
 	}
 	
-	/*
-	@OneToMany(targetEntity = Product.class, fetch=FetchType.EAGER mappedBy="category")
-	private Set<Product> product = new HashSet<Product>(0);    */
+	
+	@OneToMany(targetEntity = Product.class, fetch=FetchType.EAGER, mappedBy="category")
+	private Set<Product> product = new HashSet<Product>(0);
+	public Set<Product> getProduct() {
+		return product;
+	}
+	public void setProduct(Set<Product> product) {
+		this.product = product;
+	}    
 }

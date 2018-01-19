@@ -17,11 +17,11 @@
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.jsp">Fashion Country</a>
+      <a class="navbar-brand" href="index">Fashion Country</a>
     </div>
     </div>
     
-    <nav id="navbar-red" class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav id="navbar-red" class="navbar navbar-inverse navbar-static-top" role="navigation"> 
     <div class="container">
     <ul class="nav navbar-nav">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar">
@@ -35,11 +35,45 @@
     </div>
     
     <div class="collapse navbar-collapse" id="navDemo">
+    <ul class="nav navbar-nav">
     <li><a href="index">Home</a></li>
     <li><a href="contact"><i class="fa fa-address-book" aria-hidden="true"></i></a></li>
     <li><a href="productList">Product List</a></li>
-    <li><a href="adding">Admin</a></li>
+    <li><a href="/admin/adding">Admin</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin List<span class="caret"></span></a>
+    
+    <ul class="dropdown-menu">
+    <li><a href="${pageContext.request.contextPath }/admin/productList">Product</a></li>
+    <li><a href="${pageContext.request.contextPath }/admin/supplierList">Supplier</a></li>
+    <li><a href="${pageContext.request.contextPath }/admin/categoryList">Category</a></li>
+    </ul>
+    </li> 
     <li><a href="goToRegister">Register</a></li>
+    <li><a href="goToLogin">Sign In</a></li>
+    
+    
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category Choice<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <c:forEach var="catVAL" items="${catList}">
+    <li><a href="${pageContext.request.contextPath}/productCustList?cid=${catVal.cid}">${catVal.cname}</a></li>
+    
+    </c:forEach>
+    </ul>
+    </li>
+    </ul>
+    <ul class = "nav navbar-nav navbar right">
+    
+    <c:if test="${pageContext.request.userPrincipal.name==null }">
+    <li><a href = "${pageContext.request.contextPath }/goToRegister">Register</a></li>
+    <li><a href = "${pageContext.request.contextPath }/goToLogin">Login</a></li>
+    </c:if>
+    
+    <c:if test="${pageContext.request.userPrincipal.name!=null }">
+    <li><a>${pageContext.request.contextPath }/goToRegister"</a></li>
+    <li><a href = "${pageContext.request.contextPath }/logout">Logout</a></li>
+    </c:if>
+    
+    </ul>
     </div>
     
 </nav>

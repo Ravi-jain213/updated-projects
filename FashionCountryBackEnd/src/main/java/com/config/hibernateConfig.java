@@ -15,9 +15,11 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.DaoImpl.CategoryDaoImpl;
+import com.DaoImpl.ProductDaoImpl;
 import com.DaoImpl.SupplierDaoImpl;
 import com.DaoImpl.UserDaoImpl;
 import com.model.Category;
+import com.model.Product;
 import com.model.Supplier;
 import com.model.User;
 
@@ -58,6 +60,7 @@ public SessionFactory getHiberSession(DataSource datasource)
 	lsfb.addAnnotatedClass(User.class);
 	lsfb.addAnnotatedClass(Supplier.class);
 	lsfb.addAnnotatedClass(Category.class);
+	lsfb.addAnnotatedClass(Product.class);
 	
 	return lsfb.buildSessionFactory();
 }
@@ -83,6 +86,14 @@ public SupplierDaoImpl saveSuppData(SessionFactory sf)
 public CategoryDaoImpl saveCatData(SessionFactory sf)
 {
 	return new CategoryDaoImpl(sf);
+
+}
+
+@Autowired
+@Bean(name="Product DaoImpl")
+public ProductDaoImpl saveProdData(SessionFactory sf)
+{
+	return new ProductDaoImpl(sf);
 
 }
 
