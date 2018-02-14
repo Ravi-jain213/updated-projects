@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.Dao.UserDao;
 import com.DaoImpl.CategoryDaoImpl;
 import com.DaoImpl.ProductDaoImpl;
-import com.DaoImpl.UserDaoImpl;
 import com.model.User;
 
 @Controller
@@ -34,11 +33,11 @@ public class indexController
 		return "index";
 	}
 	
-	@RequestMapping("/")
+	@RequestMapping("/index")
 	public String home()
 	{
 		return "index";
-	}
+	}  
 	
 	@RequestMapping(value="/goToRegister", method=RequestMethod.GET)
 	public ModelAndView goToRegister()
@@ -85,15 +84,19 @@ public class indexController
 	@RequestMapping("/reLogin")
 	public String relogin()
 	{
-	return "login";	
+		return "redirect:/goToLogin";	
 	}
 	
-	@RequestMapping("/userLogged")
+    @RequestMapping("/userLogged")
 	public String userlogged()
 	{
+		return "redirect:/index";
+	} 
 	
-		return "redirect:/goToLogin";
+	@RequestMapping("/error")
+	public String usererror()
+	{
+		return "redirect:/error";
 	}
-	
 	
 }

@@ -28,15 +28,14 @@
     <artifactId>commons-io</artifactId>
     <version>2.5</version>
 </dependency>
-    
-    
-    <dependency>
+
+<dependency>
     <groupId>com</groupId>
     <artifactId>FashionCountryBackEnd</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/jstl/jstl -->
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/jstl/jstl -->
 <dependency>
     <groupId>jstl</groupId>
     <artifactId>jstl</artifactId>
@@ -106,6 +105,7 @@
     <version>4.2.3.RELEASE</version>
 </dependency>
     
+    
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 <dependency>
     <groupId>javax.servlet</groupId>
@@ -113,7 +113,6 @@
     <version>4.0.0</version>
     <scope>provided</scope>
 </dependency>
-    
     
   </dependencies>
   <build>

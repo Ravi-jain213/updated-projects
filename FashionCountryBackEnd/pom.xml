@@ -22,7 +22,22 @@
       <scope>test</scope>
     </dependency>
     
-    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-tx</artifactId>
+    <version>4.3.8.RELEASE</version>
+</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>2.0.0.Final</version>
+</dependency>
+    
+    
+     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-entitymanager</artifactId>
@@ -99,6 +114,13 @@
     <artifactId>persistence-api</artifactId>
     <version>1.0</version>
 </dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-taglibs -->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-taglibs</artifactId>
+    <version>4.2.3.RELEASE</version>
+</dependency>
     
     <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 <dependency>
@@ -120,7 +142,6 @@
     <artifactId>spring-security-config</artifactId>
     <version>4.2.3.RELEASE</version>
 </dependency>
-    
     
   </dependencies>
 </project>

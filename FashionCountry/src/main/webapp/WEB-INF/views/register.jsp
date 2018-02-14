@@ -85,12 +85,14 @@ button:hover {
     <p>Please fill in this form to create an account.</p>
     <hr>
 
-    <div class="form-group">   
+    <div class="form-group"> 
+    <form:errors path = "name" cssClass = "err" /><br>  
     <label><b>Name</b></label>
     <form:input path="name" type="text" class="form-control" placeholder="Enter name" name="name" />
     </div>
     
     <div class="form-group">
+    <form:errors path = "email" cssClass = "err" /><br>  
     <label><b>Email</b></label>
     <form:input path="email" type="text" class="form-control" placeholder="Enter Email" name="email" />
     </div>
@@ -106,6 +108,7 @@ button:hover {
     </div>
     
     <div class="form-group">
+    <form:errors path = "phone" cssClass = "err" /><br>  
     <label><b>Phone</b></label>
     <form:input path="phone" class="form-control" placeholder="Enter phone number" name="phone"  />
     </div>

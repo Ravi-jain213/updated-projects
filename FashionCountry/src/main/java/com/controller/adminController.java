@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.Dao.CategoryDao;
+import com.Dao.ProductDao;
+import com.Dao.SupplierDao;
 import com.DaoImpl.CategoryDaoImpl;
 import com.DaoImpl.ProductDaoImpl;
 import com.DaoImpl.SupplierDaoImpl;
@@ -201,19 +204,3 @@ return "redirect:/productList?update";
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-

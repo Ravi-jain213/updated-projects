@@ -69,8 +69,9 @@
     </c:if>
     
     <c:if test="${pageContext.request.userPrincipal.name!=null }">
-    <li><a>${pageContext.request.contextPath }/goToRegister"</a></li>
+    <li><a href = "${pageContext.request.contextPath }/goToRegister">Welcome</a></li>
     <li><a href = "${pageContext.request.contextPath }/logout">Logout</a></li>
+    <li><a href = "${pageContext.request.contextPath }/goToCart">My Cart<i class = "fa fa-cart-plus"  aria-hidden = "true"></i></a></li>
     </c:if>
     
     </ul>
